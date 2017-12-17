@@ -1,0 +1,81 @@
+.gameCanvas{
+  margin-top: 10px;
+}
+
+.gamePixelContainer {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-top: -5px;
+  border: 1px solid rgba(212, 208, 208, 0.6);
+}
+
+.gamePixelContainer .gamePixel{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.restartButton {
+  background: green;
+  padding: 15px 25px 15px 25px;
+  border: 0;
+  border-radius: 13px;
+  box-shadow: 0px 0px 10px;
+}
+
+/* The animation code */
+@keyframes changeColor {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+}
+
+@keyframes changeBackColor {
+    0%   {background-color: rgba(150, 0, 0, 0.9);}
+    25%  {background-color: rgba(150, 150, 0, 0.9);}
+    50%  {background-color: rgba(0, 0, 150, 0.9);}
+    100% {background-color: rgba(0, 150, 0, 0.9);}
+}
+/* The element to apply the animation to */
+.gameOverLabel {
+    font-size: 66px;
+    font-family: monospace;
+    color: red;
+    animation-name: changeColor;
+    animation-duration: 4s;
+}
+
+.gameOverLabel{
+
+}
+.restartButton:hover {
+  background: red;
+  color: white;
+}
+
+.gameCanvas{
+  padding: 20px; 
+}
+
+.gameCanvas:focus{
+  outline: 1px rgba(0, 0, 0, 0.3) dashed;
+}
+
+.gamePixelContainer .switchedOn00, .gamePixelContainer .switchedOn11{
+  background-color:rgba(255, 0, 0, 0.9);
+}
+
+.gamePixelContainer .switchedOn01, .gamePixelContainer .switchedOn10{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gamePixelContainer .iAmTheDot{
+  background-color: rgba(0, 100, 0, 0.9);
+  animation-name: changeBackColor;
+  animation-duration: 4s;
+}
+.switchedOn {
+  background: black;
+}
